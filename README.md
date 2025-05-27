@@ -1,4 +1,6 @@
-[NModUtils icon](src/main/resources/assets/nmodutils/nmodutils.png)
+<img src="src/main/resources/assets/nmodutils/nmodutils.png" alt="NModUtils icon"/>
+
+# NModUtils
 
 ## About
 This mod is a library that provides common code between tnoctua's mods.  By itself the mod is inert and requires dependant(s) to function.
