@@ -12,9 +12,10 @@ import java.util.Optional;
 
 public class Utils {
 
-    /**
-     * Common side translations for use in data generation.
-     */
+    /** Voxel width for use in VoxelShape math */
+    public static double P = 0.0625;
+
+    /** Common side translations for use in data generation. */
     public static final HashMap<String, String> TRANSLATIONS = new HashMap<>();
 
     /**
