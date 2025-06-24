@@ -75,6 +75,7 @@ public abstract class NModLangProvider extends FabricLanguageProvider {
         REGISTRY.ITEMS.forEach(item -> addTranslation(item.getTranslationKey()));
         REGISTRY.BLOCK_TAGS.forEach(blockTag -> addTranslation(blockTag.getTranslationKey()));
         REGISTRY.ITEM_TAGS.forEach(itemTag -> addTranslation(itemTag.getTranslationKey()));
+        REGISTRY.ENTITY_TAGS.forEach(entityTag -> addTranslation(entityTag.getTranslationKey()));
     }
 
 }

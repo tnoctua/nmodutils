@@ -6,6 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.component.ComponentType;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.damage.DamageType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -31,8 +32,9 @@ public class ModRegistry {
     public final HashSet<ItemGroup> ITEM_GROUPS = new HashSet<>();
     public final ArrayList<Item> ITEMS = new ArrayList<>();
     public final ArrayList<SoundEvent> SOUNDS = new ArrayList<>();
-    public final ArrayList<TagKey<Item>> ITEM_TAGS = new ArrayList<>();
     public final ArrayList<TagKey<Block>> BLOCK_TAGS = new ArrayList<>();
+    public final ArrayList<TagKey<Item>> ITEM_TAGS = new ArrayList<>();
+    public final ArrayList<TagKey<EntityType<?>>> ENTITY_TAGS = new ArrayList<>();
     public final ArrayList<RegistryKey<DamageType>> DAMAGE_TYPES = new ArrayList<>();
     public final ArrayList<BlockEntityType<?>> BLOCK_ENTITIES = new ArrayList<>();
     public final ArrayList<ComponentType<?>> COMPONENTS = new ArrayList<>();
@@ -231,6 +233,18 @@ public class ModRegistry {
     public TagKey<Item> itemTag(String key) {
         TagKey<Item> tagKey = TagKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, key));
         ITEM_TAGS.add(tagKey);
+        return tagKey;
+    }
+
+    /**
+     * Registers an entity tag to the game.
+     *
+     * @param key entity tag ID/key
+     * @return the entity tag key
+     */
+    public TagKey<EntityType<?>> entityTag(String key) {
+        TagKey<EntityType<?>> tagKey = TagKey.of(RegistryKeys.ENTITY_TYPE, Identifier.of(MOD_ID, key));
+        ENTITY_TAGS.add(tagKey);
         return tagKey;
     }
 
